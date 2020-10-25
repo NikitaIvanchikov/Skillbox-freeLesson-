@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Никита Иванчиков — официальный сайт</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+        $(function(){
+            $('button').on('click', function(){
+                $('.popup-container').css('display', 'flex');
+            });
+    
+            $('.close-icon').on('click', function(){
+                $('.popup-container').css('display', 'none');
+            })
+    
+            $('#send-button').on('click', function(){
+                let data = {
+                    'name': $('#name').val(),
+                    'email': $('#email').val()
+                };
+                $.post('/api.php', data, function(response){
+                    alert('YES');
+                });
+            });
+        });
+        </script>
+</head>
+<body>
+	<header class="header">
+        <div class="container">
+            <div class="row">
+                <nav class="menu">
+                    <a href="#">Услуги</a>
+                    <a href="#">Портфолио</a>
+                    <a href="#">Стоимость</a>
+                </nav>
+                <div class="phone-container">
+                    <a class="phone" href="tel:+38 063 999 99 99">+38 063 999 99 99</a>
+                    <button class="light-button">Заказать звонок</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="header-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1 class="name">Никита Иванчиков</h1>
+                        <p class=""> Мастер производственного обучения ВПУ, Front-End developer</p>
+                        <button>Узнай больше</button>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="image"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="my-work">
+            <div class="container">
+                <h2>Что я делаю</h2>
+                <div class="row">
+                    <div class="service-item">
+                        <img src="img/1.png" alt="">
+                        <p>Вёрстка лендинг–страниц<br/>и сайтов любой сложности</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="img/2.png" alt="">
+                        <p>Адаптивная вёрстка под<br/>все
+                            браузеры и устройства</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="img/3.png" alt="">
+                        <p>Frontend–разработка<br/>
+                            и программирование</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="img/4.png" alt="">
+                        <p>Исправление и доработка<br/>
+                            существующей вёрстки</p>
+                    </div>
+                </div>
+                <button class="light-button">
+                    Узнать стоимость
+                </button>
+
+            </div>
+        </section>
+        <section class="exampels">
+            <div class="container">
+                <h2>Примеры работ</h2>
+                <div class="row">
+                    <div class="example-item">
+                        <img src="img/example-1.png" alt="">
+                        <p>Cайт психолога Веры Антоновой</p>
+                    </div>
+                    <div class="example-item">
+                        <img src="img/example-2.png" alt="">
+                        <p>Cайт магазина детской одежды</p>
+                    </div>
+                    <div class="example-item">
+                        <img src="img/example-3.png" alt="">
+                        <p>Cайт магазина "Рыболов"</p>
+                    </div>
+                </div>
+                <button class="light-button">
+                    Заказать проект
+                </button>
+            </div>
+        </section>
+        <section class="price">
+            <div class="container">
+                <h2>Адаптивная вёрстка под все <br/> устройства
+                    и браузеры <br/> от 1000 ₽ всего за 4 часа.*</h2>
+                    <p>* Срок и стоимость могут отличаться от заявленных и рассчитываются <br> индивидуально, в зависимости от сложности задач.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <nav class="footer-nav row">
+                    <a href="">Услуги</a>
+                    <a href="">Портфолио</a>
+                    <a href="">Стоимость</a>
+                </nav>
+                <div class="footer-contacts row">
+                    <a href="mailto:mail@mail.ru">mail@mail.ru</a>
+                    <a href="tel:+380639999999">+380639999999</a>
+                </div>
+                <div class="social">
+                    <div class="social__button"><button class="light-button">Заказать звонок</button></div>
+                    <div class="social-links">
+                        <a href=""><img src="img/fb.png" alt=""></a>
+                        <a href=""><img src="img/vk.png" alt=""></a>
+                        <a href=""><img src="img/you.png" alt=""></a>
+                        <a href=""><img src="img/telegram.png" alt=""></a>
+                        <a href=""><img src="img/inst.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="popup-container">
+		<div class="popup">
+			<a href="#" class="close-icon"></a>
+			<h3>Отправка заявки</h3>
+			<form class="popup-fields">
+				<input type="text" name="name" id="name" placeholder="Ваше имя">
+				<input type="email" name="email" id="email" placeholder="Ваш e-mail">
+			</form>
+			<button id="send-button" class="light-button">Отправить</button>
+		</div>
+	</div>
+</body>
+</html>
