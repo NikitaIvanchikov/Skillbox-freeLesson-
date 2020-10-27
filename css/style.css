@@ -12,6 +12,7 @@ body{
 
 .row{
     display: flex;
+    width: 100%;
 }
 .container {
     padding-left: 100px;
@@ -88,11 +89,13 @@ display: block;
 
 }
 .service-item{
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
+    margin: 15px;
 }
 .service-item img{
-    width: 200px;
+    width: 100%
 }
 .my-work .row{
     justify-content: space-between;
@@ -125,11 +128,9 @@ display: block;
     
 }
 .footer{
-    padding: 50px;
+    padding:50px 0;
 }
-.social div {
-    padding: 15px;
-}
+
 .footer .row{
     justify-content: space-between;
 }
@@ -140,6 +141,12 @@ display: block;
 .footer-contacts.row{
     flex-direction: column; 
     justify-content: space-around;
+}
+.social div {
+    padding: 15px;
+}
+.social-links{
+    display: flex;
 }
 .social-links img{
     width: 21px;
