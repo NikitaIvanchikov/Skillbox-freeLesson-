@@ -97,9 +97,12 @@ display: block;
 .service-item img{
     width: 100%
 }
+.service-item p {
+    text-align: center;
+}
 .my-work .row{
     justify-content: space-between;
-    padding: 50px;
+    padding: 50px 0;
 }
 .exampels{
     background-color: whitesmoke;
@@ -112,7 +115,7 @@ display: block;
 }
 .exampels .row{
     justify-content: space-between;
-    padding: 50px;
+    padding: 50px 0;
 }
 .price {
     padding-top: 50px;
